@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="Cá nhân" />
+    <item
+        android:id="@+id/online"
+        android:icon="@drawable/rank"
+        android:title="Nghe nhạc online" />
+
+</menu>
