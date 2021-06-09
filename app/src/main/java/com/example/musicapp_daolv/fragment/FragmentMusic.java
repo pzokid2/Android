@@ -22,6 +22,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.musicapp_daolv.MainActivity;
 import com.example.musicapp_daolv.R;
@@ -163,6 +164,7 @@ public class FragmentMusic extends Fragment {
                 if(position < 0)
                 {
                     //position = arrayListSong.size() - 1;
+                    Toast.makeText(getActivity(), "End", Toast.LENGTH_SHORT).show();
                     position = 0;
                 }
                 if(mp.isPlaying())
@@ -243,6 +245,7 @@ public class FragmentMusic extends Fragment {
                         {
                             mp.stop();
                             animation.pause();
+                            btnPlay.setImageResource(R.drawable.play);
                         }
                         else
                         {

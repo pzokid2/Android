@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class FragmentHome extends Fragment {
 
     private RecyclerView songrcv;
-    private ArrayList<Song> lSong = new ArrayList<>();
+    private ArrayList<Song> lSong;
     private MusicHomeRcvAdapter adapter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -74,6 +74,7 @@ public class FragmentHome extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        lSong = new ArrayList<>();
         songrcv = view.findViewById(R.id.songrcv);
         getOfflineMusic();
         adapter = new MusicHomeRcvAdapter(getActivity(), lSong, FragmentHome.this);
